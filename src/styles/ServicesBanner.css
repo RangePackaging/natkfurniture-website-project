@@ -1,0 +1,174 @@
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  font-family: 'IM Fell English', serif;
+  background-image: repeating-linear-gradient(60deg, #000 0px, #222 2px, #000 4px);
+  color: #fff;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+} */
+
+.container {
+  position: relative;
+}
+
+.typingAnim {
+  position: absolute;
+  left: 50%; top: -0.5em;
+  color: #6F4E37;
+  translate: -50% -50%;
+  animation: restart 1s 16s forwards;
+  transition: color 0.3s;
+  
+  &:hover {
+    color: #aaa;
+  }
+  
+  &:active {
+    opacity: 1;
+    color: #6F4E37;
+    
+    &, & ~ .typing::before, & ~ .typing::after {
+      animation: none;
+    }
+  }
+}
+
+@keyframes restart {
+  to { color: #6F4E37; }
+}
+
+.typing {
+  font-size: 48px;
+  font-family: 'Clicker Script', serif;
+  text-align: center;
+  
+  text-shadow: -0.1ch 0.01ex 0.08ch rgba(0, 0, 0, 0.22);
+  
+  &::before {
+    content: '';
+    animation: text 14.5s 1s step-end forwards;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    translate: -0.2em;
+    animation: chars 5s 0.5s step-end 3;
+  }
+}
+
+@keyframes text {
+  0%  { content: 'D'; }
+  2%  { content: 'De'; }
+  4%  { content: 'Del'; }
+  6%  { content: 'Deli'; }
+  8%  { content: 'Deliv'; }
+  10%  { content: 'Delive'; }
+  12%  { content: 'Deliver'; }
+  14%  { content: 'Deliveri'; }
+  16%  { content: 'Deliverin'; }
+  18%  { content: 'Derlivering'; }
+  20%  { content: 'Delivering '; }
+  22%  { content: 'Delivering Q'; }
+  24%  { content: 'Delivering Qu'; }
+  26%  { content: 'Delivering Qua'; }
+  28%  { content: 'Delivering Qual'; }
+  30%  { content: 'Delivering Quali'; }
+  32%  { content: 'Delivering Qualit'; }
+  34%  { content: 'Delivering Quality '; }
+  36%  { content: 'Delivering Quality w'; }
+  38%  { content: 'Delivering Quality wi'; }
+  40%  { content: 'Delivering Quality wit'; }
+  42%  { content: 'Delivering Quality with'; }
+  44%  { content: 'Delivering Quality with '; }
+  46%  { content: 'Delivering Quality with t'; }
+  48%  { content: 'Delivering Quality with th'; }
+  50%  { content: 'Delivering Quality with the'; }
+  52%  { content: 'Delivering Quality with the '; }
+  54%  { content: 'Delivering Quality with the c'; }
+  56%  { content: 'Delivering Quality with the co'; }
+  58%  { content: 'Delivering Quality with the com'; }
+  60%  { content: 'Delivering Quality with the comf'; }
+  62%  { content: 'Delivering Quality with the comfo'; }
+  64%  { content: 'Delivering Quality with the comfor'; }
+  66%  { content: 'Delivering Quality with the comfort'; }
+  68%  { content: 'Delivering Quality with the comfort '; }
+  70%  { content: 'Delivering Quality with the comfort y'; }
+  72%  { content: 'Delivering Quality with the comfort yo'; }
+  74%  { content: 'Delivering Quality with the comfort you'; }
+  76%  { content: 'Delivering Quality with the comfort you d,'; }
+  78%  { content: 'Delivering Quality with the comfort you de'; }
+  80%  { content: 'Delivering Quality with the comfort you des'; }
+  82%  { content: 'Delivering Quality with the comfort you dese'; }
+  84%  { content: 'Delivering Quality with the comfort you deser'; }
+  86%  { content: 'Delivering Quality with the comfort you deserv'; }
+  88%  { content: 'Delivering Quality with the comfort you deserve'; }
+  90%  { content: 'Delivering Quality with the comfort you deserve.'; }
+  92%  { content: 'Delivering Quality with the comfort you deserve. '; }
+  94%  { content: 'Delivering Quality with the comfort you deserve. N'; }
+  96%  { content: 'Delivering Quality with the comfort you deserve. NA'; }
+  98%  { content: 'Delivering Quality with the comfort you deserve. NAT'; }
+  100%  { content: 'Delivering Quality with the comfort you deserve. NATK'; }
+}
+
+@keyframes chars {
+  0%  { content: 'D'; }
+  2%  { content: 'e'; }
+  4%  { content: 'l'; }
+  6%  { content: 'i'; }
+  8%  { content: 'v'; }
+  10%  { content: 'e'; }
+  12%  { content: 'r'; }
+  14%  { content: 'i'; }
+  16%  { content: 'n'; }
+  18%  { content: 'g'; }
+  20%  { content: 't'; }
+  22%  { content: 'h'; }
+  24%  { content: 'e'; }
+  26%  { content: 'Q'; }
+  28%  { content: 'u'; }
+  30%  { content: 'a'; }
+  32%  { content: 'l'; }
+  34%  { content: 'i'; }
+  36%  { content: 't'; }
+  38%  { content: 'y'; }
+  40%  { content: 'a'; }
+  42%  { content: 'n'; }
+  44%  { content: 'd'; }
+  46%  { content: 't'; }
+  48%  { content: 'h'; }
+  50%  { content: 'e'; }
+  52%  { content: 'Q'; }
+  54%  { content: 'u'; }
+  56%  { content: 'a'; }
+  58%  { content: 'l'; }
+  60%  { content: 'i'; }
+  62%  { content: 't'; }
+  64%  { content: 'y'; }
+  66%  { content: 'y'; }
+  68%  { content: 'o'; }
+  70%  { content: 'u'; }
+  72%  { content: 'd'; }
+  74%  { content: 'e'; }
+  76%  { content: 's'; }
+  78%  { content: 'e'; }
+  80%  { content: 'r'; }
+  82%  { content: 'v'; }
+  84%  { content: 'e'; }
+  86%  { content: 'N'; }
+  88%  { content: 'A'; }
+  90%  { content: 'T'; }
+  92%  { content: 'F'; }
+  94%  { content: 'J'; }
+  96%  { content: 'y'; }
+  98%  { content: 'K'; }
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap');
+
+
+.active {
+    @apply text-black underline underline-offset-4
+}
+
+body {
+    font-family: 'SUSE', sans-serif;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 3px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.pagination a:hover {
+    background: #eee;
+}
+
+.pagination li.activePagination {
+    background-color: rgb(255, 106, 0);
+    border-radius: 4px;
+    color: #fff;
+}
+
+
+.active-button {
+    color: #fc3c1a;
+}
